@@ -9,6 +9,10 @@
           </div>
         </router-link>
       </a>
+      <a class="more-hot-collection" href="../page/Collection.vue">
+        更多热门专题
+        <i class="angle-right"></i>
+      </a>
     </div>
 </template>
 
@@ -85,5 +89,11 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 17px;
+  }
+  .recommend-collection .more-hot-collection {
+    display: inline-block;
+    margin-top: 7px;
+    font-size: 14px;
+    color: #787878;
   }
 </style>
