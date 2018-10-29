@@ -34,5 +34,7 @@
   }
   a{
     cursor: pointer;
+    text-decoration: none;
   }
+
 </style>

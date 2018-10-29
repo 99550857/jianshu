@@ -16,7 +16,7 @@ export default new Router({
         {
           path: '/index',
           component: resolve => require(['../components/page/Index.vue'], resolve),
-          meta: {title: '关注'}
+          meta: {title: '主页'}
         },
         {
           //关注组件
@@ -38,26 +38,28 @@ export default new Router({
         },
         {
           //所有专题组件
-          path: '/colletions',
+          path: '/collections',
           component: resolve => require(['../components/page/Collections.vue'], resolve),
           meta: {title: '所有专题'}
         },
         {
-          // 个人中心组件
-          path: '/u',
-          component: resolve => require(['../components/page/User.vue'], resolve),
-          meta: {title: '个人中心'}
+          // 专题详情组件
+          path: '/c/:id',
+          component: resolve => require(['../components/page/Collection.vue'], resolve),
+          meta: {title: '专题详情'}
         },
         {
-          path:'/collection',
-          component:resolve => require(['../components/page/Collection.vue']),
+          path:'/collections',
+          component: resolve => require(['../components/page/Collections.vue'],resolve),
           meta:{title:'所有专题'}
         },
         {
-          path:'/c/:id',
-          component:resolve => require(['../components/page/User.vue']),
-          mata:{title:'用户信息'}
+        path:  '/u/:id',
+          component: resolve => require(['../components/page/User.vue'],resolve),
+          meta:{title:'用户'}
         }
+
+
       ]
     },
 
@@ -66,6 +68,11 @@ export default new Router({
       path: '/write',
       component: resolve => require(['../components/page/Write.vue'], resolve),
       meta: {title: '写文章'}
+    },
+    {
+      path:'/sign_in',
+      component:resolve => require(['../components/page/SignIn.vue'],resolve),
+      meta:{title:'登录'}
     }
   ]
 })

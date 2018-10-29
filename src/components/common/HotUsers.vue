@@ -100,7 +100,7 @@
     margin-right: 60px;
     padding: 0;
     font-size: 13px;
-    color: #42c02e;
+    color: #42b01a;
   }
 
   .view-all {

@@ -5,7 +5,7 @@
         <img src="/static/img/logo-large.png"/>
       </router-link>
     </div>
-    <div class="main">
+    <div class="main" style="margin-top: 30px">
 
       <b-form-group id="exampleInputGroup1"
                     label="Email address:"
@@ -49,7 +49,7 @@
           .post('http://localhost:8080/user/sign_in', {"email": this.email, "password": this.password})
           .then(function (response) {
             alert(JSON.stringify(response.data.data));
-            localStorage.setItem("loginUser", JSON.stringify(response.data.data))
+            localStorage.setItem("loginUser", JSON.stringify(response.data.data));
             that.$router.push("/")
           })
       }

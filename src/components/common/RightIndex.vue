@@ -5,12 +5,24 @@
           <img :src="border.imgSrc"/>
         </a>
       </div>
+      <a class="aside-qrbox" >
+        <img class="qrcode" src="../../../static/img/code.png" >
+        <div class="info">
+          <div class="title">下载简书手机App<i class="angle-right"></i></div>
+          <div class="description">随时随地发现和创作内容</div>
+        </div>
+      </a>
       <div class="recommended-authors">
+        <div class="title">
+          <span>推荐作者</span>
+        </div>
         <ul class="list">
           <li v-for="recommendAuthor in recommendAuthors" :key="recommendAuthor.id">
-            <a href="#" class="avatar">
-              <img :src="recommendAuthor.avatar"/>
-            </a>
+            <router-link :to="'/u/'+recommendAuthor.id">
+              <a class="avatar">
+                <img :src="recommendAuthor.avatar"/>
+              </a>
+
             <a class="follow">
               <i class="icon-font glyphicon glyphicon-plus">
               </i>
@@ -22,6 +34,7 @@
             <p >
               {{recommendAuthor.content}}
             </p>
+            </router-link>
           </li>
         </ul>
 
@@ -34,6 +47,7 @@
 </template>
 
 <script>
+
     export default {
         name: "RightIndex",
       data(){
@@ -41,27 +55,27 @@
               "borders":[
                 {
                   "id":1,
-                  "imgSrc":"//cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png"
+                  "imgSrc":"../../../static/img/right-index-1.png"
                 },
 
                 {
                   "id":2,
-                  "imgSrc":"//cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png"
+                  "imgSrc":"../../../static/img/right-index-2.png"
                 },
 
                 {
                   "id":3,
-                  "imgSrc":"//cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png"
+                  "imgSrc":"/../../../static/img/right-index-3.png"
                 },
 
                 {
                   "id":4,
-                  "imgSrc":"//cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png"
+                  "imgSrc":"../../../static/img/right-index-2.png"
                 },
 
                 {
                   "id":5,
-                  "imgSrc":"//cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png"
+                  "imgSrc":"../../../static/img/right-index-1.png"
                 },
                 ],
             "recommendAuthors":[
@@ -120,7 +134,6 @@
   }
 .aside .border a{
   background-color: transparent;
-  text-decoration: none;
 }
 
  .aside .border a img{
@@ -193,5 +206,48 @@
   .recommended-authors .list li .name{
     color: #333;
   }
+ .recommended-authors .title {
+   text-align: left;
+   font-size: 14px;
+   color: #969696;
+ }
 
+
+  .aside .aside-qrbox {
+   padding: 7px 10px;
+    margin-top: 20px;
+ }
+ .aside .aside-qrbox {
+   margin-bottom: 30px;
+   padding: 10px 22px;
+   width: 100%;
+   border: 1px solid #f0f0f0;
+   border-radius: 6px;
+   background-color: #fff;
+ }
+
+ .qrcode {
+   width: 50px;
+   height: 50px;
+   opacity: .85;
+ }
+
+ .info {
+   margin-left: 2px;
+   display: inline-block;
+   vertical-align: middle;
+ }
+
+ .title {
+   font-size: 14px;
+   color: #333;
+ }
+ .description {
+   font-size: 12px;
+   margin-top: 4px;
+   color: #999;
+ }
+  .title i{
+    font-size: 14px;
+  }
 </style>

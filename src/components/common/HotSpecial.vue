@@ -1,17 +1,18 @@
 <template>
     <div class="recommend-collection">
-      <a class="collection" href="#" v-for="data in dataList" :key="data.id">
+      <a class="collection" href="/" v-for="data in dataList" :key="data.id">
         <router-link :to="'/c/'+data.id">
           <img :src="data.url"/>
-
-          <div class="name" >
-              {{data.content}}
+          <div class="name" v-text="data.content">
+              <!--{{data.content}}-->
           </div>
         </router-link>
       </a>
-      <a class="more-hot-collection" href="../page/Collection.vue">
-        更多热门专题
-        <i class="angle-right"></i>
+      <a class="more-hot-collection">
+        <router-link to="/collections">
+          <span style="color: #333">更多热门专题 <i class="fas fa-angle-right" style="color: #333"></i></span>
+
+        </router-link>
       </a>
     </div>
 </template>
@@ -77,7 +78,7 @@
   .recommend-collection .collection .name{
     display: inline-block;
     padding: 0 11px 0 6px;
-    font-size: 17px;
+    font-size: 14px;
     color: #333;
   }
   .recommend-collection .collection img{
@@ -85,15 +86,14 @@
     height: 32px;
     vertical-align: middle;
   }
-  a{
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 17px;
-  }
   .recommend-collection .more-hot-collection {
     display: inline-block;
     margin-top: 7px;
     font-size: 14px;
     color: #787878;
   }
+  .router-link-active {
+    text-decoration: none;
+  }
+
 </style>

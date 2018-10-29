@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="ca">
     <b-carousel id="carousel1"
                 style="text-shadow: 1px 1px 2px #333;"
                 controls
@@ -61,5 +61,7 @@
 </script>
 
 <style scoped>
-
+  .ca{
+    margin-top: 30px;
+  }
 </style>

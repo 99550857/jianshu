@@ -16,6 +16,13 @@
               <a class="nickname">
                 {{article.author}}
               </a>
+              <a href="/">
+                <i class="fas fa-comments"></i>&nbsp;{{article.commentNumber}}
+              </a>
+              <span>
+                <i class="fas fa-heart"> </i>&nbsp;{{article.likeNumber}}
+              </span>
+
             </div>
           </div>
         </li>
@@ -34,42 +41,54 @@
                 "img":"//upload-images.jianshu.io/upload_images/3973862-bf267d57db515d83.png?imageMogr2/auto-orient/strip|imageView2/1/w/125/h/100",
                 "title":"30个极大提高开发效率的Visual Studio Code插件",
                 "content":"译者按： 看完这篇文章，我打算从 Sublime Text 转到 Visual Studio Code 了！ 原文: Immensely upg...",
-                "author":"Fundebug"
+                "author":"Fundebug",
+                "likeNumber":15,
+                "commentNumber":8
               },
               {
                 "id":1,
                 "img":"//upload-images.jianshu.io/upload_images/3973862-bf267d57db515d83.png?imageMogr2/auto-orient/strip|imageView2/1/w/125/h/100",
                 "title":"30个极大提高开发效率的Visual Studio Code插件",
                 "content":"译者按： 看完这篇文章，我打算从 Sublime Text 转到 Visual Studio Code 了！ 原文: Immensely upg...",
-                "author":"Fundebug"
+                "author":"Fundebug",
+                "likeNumber":15,
+                "commentNumber":8
               },
               {
                 "id":1,
                 "img":"//upload-images.jianshu.io/upload_images/3973862-bf267d57db515d83.png?imageMogr2/auto-orient/strip|imageView2/1/w/125/h/100",
                 "title":"30个极大提高开发效率的Visual Studio Code插件",
                 "content":"译者按： 看完这篇文章，我打算从 Sublime Text 转到 Visual Studio Code 了！ 原文: Immensely upg...",
-                "author":"Fundebug"
+                "author":"Fundebug",
+                "likeNumber":15,
+                "commentNumber":8
               },
               {
                 "id":1,
                 "img":"//upload-images.jianshu.io/upload_images/3973862-bf267d57db515d83.png?imageMogr2/auto-orient/strip|imageView2/1/w/125/h/100",
                 "title":"30个极大提高开发效率的Visual Studio Code插件",
                 "content":"译者按： 看完这篇文章，我打算从 Sublime Text 转到 Visual Studio Code 了！ 原文: Immensely upg...",
-                "author":"Fundebug"
+                "author":"Fundebug",
+                "likeNumber":15,
+                "commentNumber":8
               },
               {
                 "id":1,
                 "img":"//upload-images.jianshu.io/upload_images/3973862-bf267d57db515d83.png?imageMogr2/auto-orient/strip|imageView2/1/w/125/h/100",
                 "title":"30个极大提高开发效率的Visual Studio Code插件",
                 "content":"译者按： 看完这篇文章，我打算从 Sublime Text 转到 Visual Studio Code 了！ 原文: Immensely upg...",
-                "author":"Fundebug"
+                "author":"Fundebug",
+                "likeNumber":15,
+                "commentNumber":8
               },
               {
                 "id":1,
                 "img":"//upload-images.jianshu.io/upload_images/3973862-bf267d57db515d83.png?imageMogr2/auto-orient/strip|imageView2/1/w/125/h/100",
                 "title":"30个极大提高开发效率的Visual Studio Code插件",
                 "content":"译者按： 看完这篇文章，我打算从 Sublime Text 转到 Visual Studio Code 了！ 原文: Immensely upg...",
-                "author":"Fundebug"
+                "author":"Fundebug",
+                "likeNumber":15,
+                "commentNumber":8
               }
 
             ]
@@ -126,6 +145,9 @@
   }
   .note-list .meta a {
     margin-right: 10px;
+    color: #b4b4b4;
+  }
+  .note-list .meta span {
     color: #b4b4b4;
   }
   .note-list .abstract {

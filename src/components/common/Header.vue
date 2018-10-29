@@ -4,8 +4,8 @@
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
     <router-link to="/">
       <b-navbar-brand>
-        <b-img width="85" height="50"
-               src="../../static/img/logo.png"/>
+        <b-img width="85" height="40"
+               src="../../../static/img/logo-large.png"/>
       </b-navbar-brand>
     </router-link>
 
@@ -31,7 +31,7 @@
 
         <b-nav-form>
           <b-form-input size="sm" class="mr-sm-2 search-input" type="text" placeholder="Search"/>
-          <font-awesome-icon icon="search" style="color: #999;font-size: 20px;margin-left: -50px;"/>
+          <i class="fas fa-search" style="font-size: 20px"></i>
         </b-nav-form>
       </b-navbar-nav>
 
